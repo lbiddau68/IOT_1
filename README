@@ -1,1 +1,12 @@
-test
+#implementazione crontab su raspberry per schedulazione eventi
+
+lanciare
+sudo crontab -e
+
+inserire
+
+00 20 1-30 * * python /home/pi/python/valve_1_7.py
+20 20 1-30 * * python /home/pi/python/valve_2_11.py
+40 20 1-30 * * python /home/pi/python/valve_3_13.py
+
+
