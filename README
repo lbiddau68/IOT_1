@@ -10,3 +10,35 @@ inserire
 40 20 1-30 * * python /home/pi/python/valve_3_13.py
 
 
+per start da pagina php
+
+
+1) installare apache
+2) insallare php
+3) dare i peermessi sudo alla utenza www-data di apache
+
+scrivere sudo visudo 
+aggiungere in coda la riga:
+
+www-data ALL=NOPASSWD: ALL
+
+
+caricare la pagina php nella dir 
+/var/www/html
+
+la pagina php lancera la procedura python:
+
+start.php
+
+<?php
+exec('sudo python start2.py');
+?>
+
+start.py
+
+#!/usr/bin/env python
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11, GPIO.OUT)
+GPIO.output(11,GPIO.LOW)
+
