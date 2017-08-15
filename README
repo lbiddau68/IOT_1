@@ -1,4 +1,19 @@
-#implementazione crontab su raspberry per schedulazione eventi
+PROGETTO IOT IRRIGAZIONE V1
+
+il raspberry pi zero w controlla 3 elettrovalvole facendole partire a distanza di 20 minuti l' una dall' altra
+lo start e' dato da crontab mentre la durata di apertura da un ciclo
+all' interno del codice python.
+
+
+i pin GPIO utilizzati sono
+7,11,13
+
+i nuovi relay vannoc controlalti con l uscita VCC a 3V e non 5V 
+mentre i vecchi funzionano regolarmente a 5v.
+
+
+
+implementazione crontab su raspberry per schedulazione eventi
 
 lanciare
 sudo crontab -e
